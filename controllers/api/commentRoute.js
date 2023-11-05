@@ -1,6 +1,6 @@
 // Start of JS file
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET all, GET by id, POST, PUT by id, DELETE by id

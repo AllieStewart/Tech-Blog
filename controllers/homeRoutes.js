@@ -1,8 +1,10 @@
 // Start of JS file
 // Home page routes.
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
+
+// edit 'projects' to Post
 
 router.get('/', async (req, res) => {
   try {

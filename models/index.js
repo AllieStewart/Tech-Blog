@@ -1,7 +1,8 @@
 // Start of JS file
 // Index file to require files.
 const User = require('./User');
-//const Project = require('./Project');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
 // User.hasMany(Project, {
 //   foreignKey: 'user_id',
@@ -12,6 +13,11 @@ const User = require('./User');
 //   foreignKey: 'user_id'
 // });
 
-module.exports = { User };
+// User has many Post, Comment
+// Post has many Comment
+// Comment belongs to User, Post
+// Post belongs to User
+
+module.exports = { User, Post, Comment };
 // ^Placeholder from mini-project
 // End of JS file

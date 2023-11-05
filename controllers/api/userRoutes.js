@@ -2,6 +2,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// GET all Users, GET User by id
+// PUT (update) User by id
+// DEL User by id
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);

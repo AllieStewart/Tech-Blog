@@ -2,17 +2,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Post extends Model {}
+class Comment extends Model {}
 
-Post.init(
+Comment.init(
     {
         id: {
 
         },
-        title: {
+        text: {
 
         },
-        content: {
+        post_id: {
 
         },
         user_id: {
@@ -28,6 +28,6 @@ Post.init(
       }
 );
 
-module.exports = Post;
+module.exports = Comment;
 
 // End of JS file
