@@ -9,6 +9,4 @@ const withAuth = (req, res, next) => {
   };
   
   module.exports = withAuth;
-
-// ^Placeholder from mini-project
 // End of JS file  
