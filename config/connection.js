@@ -21,5 +21,4 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
-// ^Placeholder from mini-project
 // End of JS file
