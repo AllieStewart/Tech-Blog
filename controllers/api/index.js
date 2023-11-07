@@ -10,5 +10,4 @@ router.use('/users', userRoutes);
 router.use('/comments', commentRoutes);
 
 module.exports = router;
-// ^Placeholder from mini-project
 // End of JS file
