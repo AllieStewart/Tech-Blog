@@ -1,51 +1,30 @@
 // Start of JS file
-// New blogs.
-const newFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const name = document.querySelector('#project-name').value.trim();
-    const needed_funding = document.querySelector('#project-funding').value.trim();
-    const description = document.querySelector('#project-desc').value.trim();
-  
-    if (name && needed_funding && description) {
-      const response = await fetch(`/api/projects`, {
-        method: 'POST',
-        body: JSON.stringify({ name, needed_funding, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to create project');
-      }
+// Creating new posts.
+async function newFormHandler(event) {
+  event.preventDefault();
+
+  const title = document.querySelector('input[name="post-title"]').value;
+  const content = document.querySelector('input[name="content"]').value;
+
+  const response = await fetch(`/api/posts`, {
+    method: 'POST',
+    body: JSON.stringify({
+      title,
+      content
+    }),
+    headers: {
+      'Content-Type': 'application/json'
     }
-  };
-  
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/projects/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete project');
-      }
-    }
-  };
-  
-  document
-    .querySelector('.new-project-form')
-    .addEventListener('submit', newFormHandler);
-  
-  document
-    .querySelector('.project-list')
-    .addEventListener('click', delButtonHandler);
-// ^Placeholder from mini-project
+  });
+
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert(response.statusText);
+  }
+};
+
+document
+.querySelector('#new-post-form')
+.addEventListener('submit', newFormHandler);
 // End of JS file

@@ -1,51 +1,17 @@
 {{!-- Start of Handlebar file --}}
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
+<div class="card">
+    <h3 class="card-header">Create New Post</h3>
+    <form class="card-body new-post-form" id="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="post-title" name="post-title" class="form-input" />
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Post:</h3>
 
-    <form class="form new-post-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="post-name" name="post-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
+        <label class="form-label" for="content">Content</label>
+        <input id="content" name="content" class="form-input" />
+
+        <button type="submit" class="btn">Create</button>
     </form>
-  </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
 </div>
 
-<script src="./js/new.js"></script>
-{{!-- ^Placeholder from mini-project --}}
+<script src="../public/js/new.js"></script>
 {{!-- End of Handlebar file --}}

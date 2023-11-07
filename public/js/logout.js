@@ -13,7 +13,7 @@ const logout = async () => {
     }
   };
   
-  document.querySelector('#logout').addEventListener('click', logout);
-
-// ^Placeholder from mini-project
+  document
+  .querySelector('#logout')
+  .addEventListener('click', logout);
 // End of JS file
