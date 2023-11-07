@@ -1,5 +1,5 @@
 // Start of JS file
-// Helper functions.
+// Helper functions, namely for dates in this case.
 module.exports = {
     format_date: (date) => {
       // Format date as MM/DD/YYYY

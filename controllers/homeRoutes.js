@@ -5,6 +5,7 @@ const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // edit 'projects' to Post
+// GET, PUT, POST, DELETE?
 
 router.get('/', async (req, res) => {
   try {
