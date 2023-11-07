@@ -2,40 +2,20 @@
 // Index to seed the database,
 // takes seed data from other files in /seeds.
 const sequelize = require('../config/connection');
-const { User, Post, Comment } = require('../models');
 
-const userData = require('./userData.js');
-const postData = require('./postData.js');
-const commentData = require('./commentData.js');
+const seedUsers = require('./userData.js');
+const seedPosts = require('./postData.js');
+const seedComments = require('./commentData.js');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  const posts = await Post.bulkCreate(postData);
-
-  for (const post of postData) {
-    await Post.create({
-      ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
-
-  for (const comment of commentData) {
-    await Comment.create({
-      ...comment,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-      post_id: posts[Math.floor(Math.random() * posts.length)].id,
-    });
-  }
+  await seedUsers();
+  await seedPosts();
+  await seedComments();
 
   process.exit(0);
 };
 
 seedDatabase();
-
 // End of JS file
