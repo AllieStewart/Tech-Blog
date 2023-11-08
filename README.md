@@ -11,7 +11,6 @@
 - [What I Have Learned](#what-i-have-learned)
 - [Credits](#credits)
 - [Licenses](#licenses)
-</br>
 
 ## Description
 Challenge 14 coursework for UT bootcamp. Uses Handlebars, Sequelize, 'express-sessions', and Heroku. </br>
