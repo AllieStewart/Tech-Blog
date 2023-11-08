@@ -16,33 +16,46 @@
 Challenge 14 coursework for UT bootcamp. Uses Handlebars, Sequelize, 'express-sessions', and Heroku. </br>
 This is a full-stack application for a tech blog, where the user can view posts and comments from </br>
 other users, and login to create their own posts and comments. The logged-in user can also </br>
-comment on other posts, and update their own posts/comments. They can also log out, or be  </br>
+update and delete their own posts/comments. They can also log out, or be  </br>
 logged out after a set amount of time has passed. </br>
 
 ## Screenshots
----Main page---
+---Main page--- </br>
+![Alt text](screenshots/1_main_page.png)
 
----Clicking on a post---
+---Viewing all posts--- </br>
+![Alt text](screenshots/2_posts.png)
 
----Signing up---
+---Clicking on a post--- </br>
+![Alt text](screenshots/3_clicking_on_post.png)
 
----Logging on---
+---Logging on--- </br>
+![Alt text](screenshots/4_logging_in.png)
 
----Going to dashboard to make a post---
+---Going to dashboard to make a post--- </br>
+![Alt text](screenshots/5_dashboard.png)
 
----Making a comment---
+![Alt text](screenshots/6_create_new_post.png)
 
----Seeing post on main page---
+![Alt text](screenshots/7_dashboard_with_new_post.png)
 
----Commenting on another post---
+---Editing post--- </br>
+![Alt text](screenshots/8_edit_post.png)
 
----Editing post---
+---Seeing edited post (comment) on main page--- </br>
+![Alt text](screenshots/9_new_posts.png)
 
----Logging off---
+---Deleting post and viewing page after deletion--- </br>
+![Alt text](screenshots/10_deleted_post.png)
+
+![Alt text](screenshots/11_deleted_post_gone_from_page.png)
+
+---Signing up--- </br>
+![Alt text](screenshots/12_sign_up.png)
 
 ## Usage
 Simply click on the link and watch the magic happen. </br>  
-Link to the website: --- </br>
+Link to the website: https://tech-blog-ajs-baa5a65ab33b.herokuapp.com </br>
 
 ## What I Have Learned
 I've formed a good foundation for MVC structure, route creations, connections between files, </br>
