@@ -5,8 +5,8 @@ const sequelize = require('../config/connection');
 const { Post, Comment, User } = require('../models');
 
 // GET all posts -> homepage
-router.get('/', (req, res) => {
-  Post.findAll({
+router.get('/', async (req, res) => {
+    await Post.findAll({
           attributes: [
               'id',
               'title',
@@ -52,8 +52,8 @@ router.get('/signup', (req, res) => {
 });
 
 // GET post id -> single-post page
-router.get('/post/:id', (req, res) => {
-  Post.findOne({
+router.get('/post/:id', async (req, res) => {
+    await Post.findOne({
           where: {
               id: req.params.id
           },
@@ -93,8 +93,8 @@ router.get('/post/:id', (req, res) => {
 });
 
 // GET posts comments -> post-comments page
-router.get('/posts-comments', (req, res) => {
-  Post.findOne({
+router.get('/posts-comments', async (req, res) => {
+    await Post.findOne({
           where: {
               id: req.params.id
           },
