@@ -55,7 +55,7 @@ logged out after a set amount of time has passed. </br>
 
 ## Usage
 Simply click on the link and watch the magic happen. </br>  
-Link to the website: https://tech-blog-ajs-baa5a65ab33b.herokuapp.com </br>
+Link to the website: OFFLINE </br>
 
 ## What I Have Learned
 I've formed a good foundation for MVC structure, route creations, connections between files, </br>
